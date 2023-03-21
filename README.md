@@ -1,8 +1,8 @@
-# Logtime
+# Alarm42
 
 ## Only for 1337 students
 
-simples GUI Alarm
+Simple GUI Alarm
 
 PS : you can't use it if your not plugging headphones or any other output devices "Imac Speakers rejected"
 
