@@ -4,6 +4,7 @@ import time
 from tkinter import *
 import pyaudio
 
+
 p = pyaudio.PyAudio()
 info = p.get_host_api_info_by_index(0)
 if p.get_device_info_by_host_api_device_index(0, 1).get('name') == "iMac Speakers":
