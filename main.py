@@ -3,8 +3,18 @@ from playsound import playsound
 import time
 from tkinter import *
 import pyaudio
+import os
 
 
+os.system("users >> username.txt")
+with open('username.txt','r') as file:
+    readed = file.read()
+os.system("rm -rf username.txt")
+login = ""
+for i in readed:
+	if(i >= 'a' and i <= 'z' or i == '-'):
+		login += i
+sound_path = f"/Users/{login}/alarm42/sound.mp3"
 p = pyaudio.PyAudio()
 info = p.get_host_api_info_by_index(0)
 if p.get_device_info_by_host_api_device_index(0, 1).get('name') == "iMac Speakers":
@@ -25,7 +35,7 @@ def set_alarm():
     while True :
         current_time = time.strftime('%H%M')
         if (current_time == alarm):
-            playsound('./sound.mp3')
+            playsound(sound_path)
             exit(0)
 
 root = tk.Tk()
